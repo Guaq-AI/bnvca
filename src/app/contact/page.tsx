@@ -108,17 +108,17 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Embed - Precise Location */}
+      {/* Map Embed - Exact Pin for Vaidya Bhavan */}
       <section className="h-[600px] w-full bg-foreground/[0.05] grayscale contrast-[0.8] brightness-[1.1] hover:grayscale-0 transition-all duration-1000 border-t border-foreground/5 relative overflow-hidden">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.847582522438!2d72.8266447759639!3d18.93816595628643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1e700000001%3A0x8f8f8f8f8f8f8f8f!2sB.%20N.%20Vaidya%20%26%20Associates!5e0!3m2!1sen!2sin!4v1712345678901!5m2!1sen!2sin" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.847582522438!2d72.8249574!3d18.9514261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf006680430f%3A0x1a2fde1ac7bb05e8!2sVaidya%20Bhavan!5e0!3m2!1sen!2sin!4v1712345678901!5m2!1sen!2sin" 
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 
           allowFullScreen 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
-          title="B. N. Vaidya & Associates Office Location"
+          title="Vaidya Bhavan Office Location"
         ></iframe>
       </section>
 

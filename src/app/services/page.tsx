@@ -59,7 +59,7 @@ export default function ServicesPage() {
                     </p>
                     <Link href={`/services/${service.id}`} className="btn-bezeled group !px-8 !py-3 inline-block mt-8">
                       <span className="flex items-center gap-3">
-                        Explore Deeply
+                        Read More
                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </span>
                     </Link>
