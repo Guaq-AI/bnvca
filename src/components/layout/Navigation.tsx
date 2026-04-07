@@ -24,7 +24,7 @@ export const Navigation = () => {
       // Instant translucency on any scroll
       setScrolled(window.scrollY > 0);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll(); // Check initial position
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -34,7 +34,7 @@ export const Navigation = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-foreground/5 py-4 shadow-sm"
+          ? "bg-background/70 backdrop-blur-xl border-b border-foreground/5 py-4 shadow-sm"
           : "bg-transparent border-transparent py-6"
       )}
     >

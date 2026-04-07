@@ -7,14 +7,45 @@ import { useRef } from "react";
 import { companyInfo, services } from "@/data/content";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
+const GeometricLines = () => (
+  <svg 
+    viewBox="0 0 800 800" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-full h-full opacity-[0.07] text-primary"
+  >
+    <path d="M800 100L400 400L800 700" stroke="currentColor" strokeWidth="0.5" />
+    <path d="M800 200L300 450L800 600" stroke="currentColor" strokeWidth="0.5" />
+    <path d="M800 50L200 500L800 750" stroke="currentColor" strokeWidth="0.5" />
+    <path d="M800 300L500 350L800 400" stroke="currentColor" strokeWidth="0.5" />
+    <path d="M800 0L100 600L800 800" stroke="currentColor" strokeWidth="0.5" />
+    <circle cx="400" cy="400" r="300" stroke="currentColor" strokeWidth="0.2" strokeDasharray="4 4" />
+    <circle cx="400" cy="400" r="200" stroke="currentColor" strokeWidth="0.2" />
+    <line x1="800" y1="400" x2="0" y2="400" stroke="currentColor" strokeWidth="0.1" />
+  </svg>
+);
+
 export default function Home() {
   const containerRef = useRef(null);
 
   return (
     <div className="flex flex-col min-h-screen bg-background" ref={containerRef}>
       
-      {/* Editorial Hero Section - Clean & High Contrast */}
-      <section className="relative min-h-[85vh] flex items-center pt-24 pb-12 overflow-hidden">
+      {/* Editorial Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden">
+        
+        {/* Right Border Geometric Shapes */}
+        <div className="absolute top-0 right-0 w-1/2 h-full pointer-events-none z-0">
+          <motion.div 
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full h-full"
+          >
+            <GeometricLines />
+          </motion.div>
+        </div>
+
         <div className="container mx-auto px-6 md:px-12 relative z-20">
           <div className="max-w-5xl">
             <motion.div
@@ -23,7 +54,7 @@ export default function Home() {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="flex items-center gap-6 mb-12"
             >
-              <div className="h-0.5 w-16 bg-primary" />
+              <div className="h-[2px] w-16 bg-primary" />
               <span className="text-[10px] font-sans tracking-[0.5em] text-primary uppercase font-bold">
                 ESTABLISHED {companyInfo.foundedYear}
               </span>
@@ -45,7 +76,7 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.4 }}
               className="text-xl md:text-3xl text-foreground/70 font-sans max-w-3xl leading-relaxed mb-16 font-light"
             >
-              {companyInfo.tagline} A premier multidisciplinary firm providing unmatched excellence in Direct Tax, GST, Audit, and Regulatory Services.
+              {companyInfo.tagline} We provide unmatched excellence in Direct Tax, GST, Audit, and Regulatory Services.
             </motion.p>
 
             <motion.div
@@ -140,7 +171,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-24">
               <div className="space-y-8 group">
-                <div className="h-0.5 w-12 bg-primary/30 group-hover:w-20 transition-all duration-700" />
+                <div className="h-[2px] w-12 bg-primary/30 group-hover:w-20 transition-all duration-700" />
                 <div>
                   <div className="text-8xl font-serif font-bold tracking-tighter text-foreground">35+</div>
                   <div className="text-[10px] font-sans uppercase tracking-[0.4em] text-primary font-bold mt-4">YEARS OF LEGACY</div>
@@ -151,7 +182,7 @@ export default function Home() {
               </div>
               
               <div className="space-y-8 group">
-                <div className="h-0.5 w-12 bg-primary/30 group-hover:w-20 transition-all duration-700" />
+                <div className="h-[2px] w-12 bg-primary/30 group-hover:w-20 transition-all duration-700" />
                 <div>
                   <div className="text-8xl font-serif font-bold tracking-tighter text-foreground">10k+</div>
                   <div className="text-[10px] font-sans uppercase tracking-[0.4em] text-primary font-bold mt-4">AUDITS COMPLETED</div>
@@ -162,7 +193,7 @@ export default function Home() {
               </div>
 
               <div className="space-y-8 group">
-                <div className="h-0.5 w-12 bg-primary/30 group-hover:w-20 transition-all duration-700" />
+                <div className="h-[2px] w-12 bg-primary/30 group-hover:w-20 transition-all duration-700" />
                 <div>
                   <div className="text-8xl font-serif font-bold tracking-tighter text-foreground">100%</div>
                   <div className="text-[10px] font-sans uppercase tracking-[0.4em] text-primary font-bold mt-4">CLIENT INTEGRITY</div>
