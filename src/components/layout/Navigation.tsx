@@ -72,7 +72,7 @@ export const Navigation = () => {
         <div className="hidden md:block">
           <Link href="/contact">
             <Button variant="outline" className="rounded-none px-8 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500 font-sans tracking-widest text-[10px] uppercase font-bold">
-              Consultation
+              Schedule Consultation
             </Button>
           </Link>
         </div>
