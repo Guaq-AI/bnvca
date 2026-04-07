@@ -97,6 +97,26 @@ export const services: ServiceDetail[] = [
       solution: "We provided end-to-end advisory on the structuring of the fund, prepared all necessary documentation for FEMA compliance, and navigated the regulatory approval process with the relevant authorities.",
       outcome: "Successfully secured SEBI registration and ensured seamless cross-border capital flow, enabling the client to launch their first Indian fund on schedule."
     }
+  },
+  {
+    id: "bullion-advisory",
+    title: "Bullion & Advisory",
+    shortDescription: "Specialized consultancy for the precious metals sector, from market entry to commodity exchange setup.",
+    fullDescription: "With over three decades of specific expertise in the bullion sector, we offer unmatched strategic advisory for precious metals markets. From helping banks set up bullion trading desks to advising on the reform process with RBI and SEBI, we provide the deep domain knowledge required to navigate this specialized industry.",
+    offerings: [
+      "Bullion trading and desk setup for banks",
+      "Consultancy for refineries and jewellery businesses",
+      "Advisory on Gold ETFs and Digital Gold products",
+      "Commodity exchange setup and regulatory navigation",
+      "Industry-specific tax structuring for precious metals"
+    ],
+    caseStudy: {
+      title: "Strategic Entry for a Digital Gold Platform",
+      context: "A fintech startup aimed to launch a regulated Digital Gold product in the Indian market.",
+      challenge: "The project required navigating complex storage regulations, ensuring physical gold backing transparency, and adhering to evolving SEBI guidelines.",
+      solution: "Leveraging our deep ties with the World Gold Council and regulatory bodies, we structured the legal framework for the product, established audit protocols for physical inventory, and guided the SEBI approval process.",
+      outcome: "The platform launched successfully as one of the first compliant Digital Gold providers in India, achieving over 1 million users within 18 months."
+    }
   }
 ];
 

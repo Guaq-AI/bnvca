@@ -83,27 +83,27 @@
 
 @layer base {
   :root {
-    --background: #f5f4f0; /* Warm Bone Paper */
-    --foreground: #1a1a1a;
+    --background: #ffffff; /* Crisp High Contrast White */
+    --foreground: #000000; /* Deep Black */
     --card: #ffffff;
-    --card-foreground: #1a1a1a;
+    --card-foreground: #000000;
     --popover: #ffffff;
-    --popover-foreground: #1a1a1a;
+    --popover-foreground: #000000;
     
-    --primary: #1c3630; /* Regal Deep Emerald */
-    --primary-foreground: #f5f4f0;
+    --primary: #1c3630; /* Regal Deep Emerald remains for accents */
+    --primary-foreground: #ffffff;
     
-    --secondary: #2a2a2a;
-    --secondary-foreground: #f5f4f0;
+    --secondary: #1a1a1a;
+    --secondary-foreground: #ffffff;
     
-    --muted: #e5e4e0;
+    --muted: #f0f0f0;
     --muted-foreground: #666666;
-    --accent: #8a6d3b; /* Antique Bronze */
-    --accent-foreground: #f5f4f0;
+    --accent: #8a6d3b; /* Antique Bronze remains for luxury detail */
+    --accent-foreground: #ffffff;
     --destructive: #cc0000;
-    --destructive-foreground: #f5f4f0;
-    --border: #d1d0cc;
-    --input: #d1d0cc;
+    --destructive-foreground: #ffffff;
+    --border: #e5e5e5;
+    --input: #e5e5e5;
     --ring: #1c3630;
     --radius: 0rem;
   }
@@ -115,7 +115,8 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+    /* Noise texture significantly reduced for crispness */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
     scroll-behavior: smooth;
   }
 }
