@@ -87,21 +87,21 @@ export function ConsultationForm() {
     }
   };
 
-  const inputClasses = "flex h-12 w-full rounded-none border-b border-white/20 bg-transparent px-0 py-2 text-base text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-zinc-600 focus-visible:outline-none focus-visible:border-primary disabled:cursor-not-allowed disabled:opacity-50 transition-colors font-sans";
-  const labelClasses = "text-xs font-sans uppercase tracking-[0.1em] text-zinc-400 mb-2 block";
+  const inputClasses = "flex h-12 w-full rounded-none border-b border-foreground/20 bg-transparent px-0 py-2 text-base text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-foreground/30 focus-visible:outline-none focus-visible:border-primary disabled:cursor-not-allowed disabled:opacity-50 transition-colors font-sans";
+  const labelClasses = "text-[10px] font-sans uppercase tracking-[0.2em] text-foreground/50 mb-2 block font-bold";
 
   if (submitStatus === "success") {
     return (
       <div className="flex flex-col items-center justify-center space-y-6 rounded-none border border-primary/20 bg-primary/5 p-12 text-center">
         <CheckCircle className="h-16 w-16 text-primary" />
-        <h3 className="text-2xl font-serif text-white">Request Received</h3>
-        <p className="text-zinc-400 font-sans max-w-md mx-auto">
+        <h3 className="text-2xl font-serif text-foreground">Request Received</h3>
+        <p className="text-foreground/60 font-sans max-w-md mx-auto">
           Thank you for reaching out. A senior partner will review your inquiry and connect with you shortly.
         </p>
         <Button 
           variant="outline" 
           onClick={() => setSubmitStatus("idle")}
-          className="mt-8 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground font-sans tracking-wide uppercase text-xs px-8 rounded-full"
+          className="mt-8 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground font-sans tracking-widest uppercase text-[10px] px-8 rounded-none"
         >
           Send Another Request
         </Button>
@@ -112,7 +112,7 @@ export function ConsultationForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-10">
       {submitStatus === "error" && (
-        <div className="flex items-center gap-3 border border-red-500/20 bg-red-500/10 p-4 text-sm text-red-400 font-sans">
+        <div className="flex items-center gap-3 border border-destructive/20 bg-destructive/10 p-4 text-sm text-destructive font-sans">
           <AlertCircle className="h-5 w-5 shrink-0" />
           <p>{errorMessage}</p>
         </div>
@@ -136,10 +136,10 @@ export function ConsultationForm() {
             id="name"
             {...register("name")}
             placeholder="John Doe"
-            className={cn(inputClasses, errors.name && "border-red-500")}
+            className={cn(inputClasses, errors.name && "border-destructive")}
           />
           {errors.name && (
-            <p className="text-xs font-sans text-red-400 mt-2">{errors.name.message}</p>
+            <p className="text-[10px] uppercase tracking-wider font-sans text-destructive mt-2">{errors.name.message}</p>
           )}
         </div>
 
@@ -152,10 +152,10 @@ export function ConsultationForm() {
             type="email"
             {...register("email")}
             placeholder="john@example.com"
-            className={cn(inputClasses, errors.email && "border-red-500")}
+            className={cn(inputClasses, errors.email && "border-destructive")}
           />
           {errors.email && (
-            <p className="text-xs font-sans text-red-400 mt-2">{errors.email.message}</p>
+            <p className="text-[10px] uppercase tracking-wider font-sans text-destructive mt-2">{errors.email.message}</p>
           )}
         </div>
       </div>
@@ -170,10 +170,10 @@ export function ConsultationForm() {
             type="tel"
             {...register("phone")}
             placeholder="+91 98765 43210"
-            className={cn(inputClasses, errors.phone && "border-red-500")}
+            className={cn(inputClasses, errors.phone && "border-destructive")}
           />
           {errors.phone && (
-            <p className="text-xs font-sans text-red-400 mt-2">{errors.phone.message}</p>
+            <p className="text-[10px] uppercase tracking-wider font-sans text-destructive mt-2">{errors.phone.message}</p>
           )}
         </div>
 
@@ -184,17 +184,17 @@ export function ConsultationForm() {
           <select
             id="service"
             {...register("service")}
-            className={cn(inputClasses, "appearance-none", errors.service && "border-red-500")}
+            className={cn(inputClasses, "appearance-none", errors.service && "border-destructive")}
           >
-            <option value="" className="bg-zinc-900">Select an area</option>
+            <option value="" className="bg-background">Select an area</option>
             {services.map((service) => (
-              <option key={service} value={service} className="bg-zinc-900 text-white">
+              <option key={service} value={service} className="bg-background text-foreground">
                 {service}
               </option>
             ))}
           </select>
           {errors.service && (
-            <p className="text-xs font-sans text-red-400 mt-2">{errors.service.message}</p>
+            <p className="text-[10px] uppercase tracking-wider font-sans text-destructive mt-2">{errors.service.message}</p>
           )}
         </div>
       </div>
@@ -209,19 +209,19 @@ export function ConsultationForm() {
           placeholder="How can we assist you?"
           rows={4}
           className={cn(
-            "flex min-h-[120px] w-full rounded-none border-b border-white/20 bg-transparent px-0 py-2 text-base text-white ring-offset-background placeholder:text-zinc-600 focus-visible:outline-none focus-visible:border-primary disabled:cursor-not-allowed disabled:opacity-50 transition-colors font-sans resize-none",
-            errors.message && "border-red-500"
+            "flex min-h-[120px] w-full rounded-none border-b border-foreground/20 bg-transparent px-0 py-2 text-base text-foreground ring-offset-background placeholder:text-foreground/30 focus-visible:outline-none focus-visible:border-primary disabled:cursor-not-allowed disabled:opacity-50 transition-colors font-sans resize-none",
+            errors.message && "border-destructive"
           )}
         />
         {errors.message && (
-          <p className="text-xs font-sans text-red-400 mt-2">{errors.message.message}</p>
+          <p className="text-[10px] uppercase tracking-wider font-sans text-destructive mt-2">{errors.message.message}</p>
         )}
       </div>
 
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full h-14 text-sm uppercase tracking-widest font-sans font-medium transition-all"
+        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-none h-14 text-xs uppercase tracking-[0.3em] font-sans font-bold transition-all shadow-xl shadow-primary/10"
       >
         {isSubmitting ? (
           <>

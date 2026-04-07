@@ -9,36 +9,25 @@ export default function TeamPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-end pb-24 overflow-hidden border-b border-white/5">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-10" />
-          <Image
-            src="/team1.jpeg"
-            alt="BNVCA Leadership"
-            fill
-            className="object-cover opacity-10 mix-blend-luminosity grayscale"
-            priority
-          />
-        </div>
-
+      {/* Editorial Hero - Typographic Focus */}
+      <section className="relative pt-40 pb-24 border-b border-foreground/5">
         <div className="container mx-auto px-6 md:px-12 relative z-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-px w-8 bg-primary" />
-              <span className="text-xs font-sans tracking-[0.3em] text-primary uppercase">
-                The Partners
+            <div className="flex items-center gap-4 mb-8">
+              <div className="h-px w-12 bg-primary" />
+              <span className="text-[10px] font-sans tracking-[0.4em] text-primary uppercase font-bold">
+                THE PARTNERS
               </span>
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-[7rem] font-serif leading-[0.9] tracking-tight text-white mb-8">
-              Leadership & <span className="italic text-zinc-500">Vision.</span>
+            <h1 className="text-7xl md:text-9xl lg:text-[10rem] font-serif leading-[0.85] tracking-tighter text-foreground mb-12">
+              Leadership & <span className="text-foreground/20 italic font-light">Vision.</span>
             </h1>
-            <p className="text-xl text-zinc-400 font-sans max-w-2xl leading-relaxed">
-              Meet the experts behind B.N. Vaidya & Associates. A team dedicated to precision, integrity, and your financial success.
+            <p className="text-xl md:text-2xl text-foreground/70 font-sans max-w-3xl leading-relaxed font-light">
+              Meet the experts behind B.N. Vaidya & Associates. A team dedicated to precision, integrity, and your financial success since 1987.
             </p>
           </motion.div>
         </div>
@@ -47,10 +36,10 @@ export default function TeamPage() {
       {/* Team Members List */}
       <section className="py-32">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="space-y-40">
+          <div className="space-y-56">
             {team.map((member, index) => (
               <div key={member.name} className="relative">
-                <div className={`grid grid-cols-1 lg:grid-cols-12 gap-16 items-start`}>
+                <div className={`grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start`}>
                   
                   {/* Image Column */}
                   <motion.div 
@@ -60,22 +49,23 @@ export default function TeamPage() {
                     transition={{ duration: 0.8 }}
                     className={`lg:col-span-5 ${index % 2 !== 0 ? 'lg:order-2 lg:col-start-8' : ''}`}
                   >
-                    <div className="relative aspect-[3/4] overflow-hidden group">
-                      <div className="absolute inset-0 bg-primary/20 z-10 opacity-0 group-hover:opacity-100 mix-blend-overlay transition-opacity duration-700" />
-                      <Image
-                        src={`/team${index + 1}.jpeg`}
-                        alt={member.name}
-                        fill
-                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-100 group-hover:scale-105"
-                        priority={index === 0}
-                      />
-                      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 to-transparent z-20" />
+                    <div className="relative aspect-[3/4] overflow-hidden group border border-foreground/5 p-4 bg-foreground/[0.01]">
+                      <div className="absolute inset-0 bg-primary/10 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                      <div className="relative w-full h-full overflow-hidden">
+                        <Image
+                          src={`/team${index + 1}.jpeg`}
+                          alt={member.name}
+                          fill
+                          className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-100 group-hover:scale-105"
+                          priority={index === 0}
+                        />
+                      </div>
                       {member.linkedin && (
                         <a 
                           href={member.linkedin} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="absolute bottom-6 right-6 z-30 p-4 bg-primary text-primary-foreground rounded-full hover:scale-110 transition-transform"
+                          className="absolute bottom-10 right-10 z-30 p-5 bg-primary text-primary-foreground hover:bg-foreground hover:text-background transition-all shadow-2xl"
                         >
                           <Briefcase className="h-5 w-5" />
                         </a>
@@ -89,34 +79,34 @@ export default function TeamPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className={`lg:col-span-6 ${index % 2 !== 0 ? 'lg:order-1' : 'lg:col-start-7'} pt-8`}
+                    className={`lg:col-span-6 ${index % 2 !== 0 ? 'lg:order-1' : 'lg:col-start-7'} pt-12`}
                   >
-                    <div className="mb-12">
-                      <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">
+                    <div className="mb-16">
+                      <h2 className="text-5xl md:text-6xl font-serif text-foreground mb-6 tracking-tight">
                         {member.name}
                       </h2>
-                      <div className="flex items-center gap-4">
-                        <p className="text-sm font-sans uppercase tracking-[0.2em] text-primary">
+                      <div className="flex items-center gap-6">
+                        <p className="text-[10px] font-sans uppercase tracking-[0.3em] text-primary font-bold">
                           {member.role}
                         </p>
-                        <span className="w-1 h-1 bg-zinc-600 rounded-full" />
-                        <p className="text-sm font-sans text-zinc-500">
-                          {member.experience} Exp.
+                        <span className="w-1 h-1 bg-foreground/20 rounded-full" />
+                        <p className="text-[10px] font-sans uppercase tracking-[0.3em] text-foreground/40 font-bold">
+                          {member.experience} EXP.
                         </p>
                       </div>
                     </div>
 
-                    <p className="text-2xl font-serif text-zinc-400 italic leading-relaxed mb-12">
+                    <p className="text-3xl md:text-4xl font-serif text-foreground/40 italic leading-snug mb-16 tracking-tight">
                       "{member.bio}"
                     </p>
 
-                    <div className="bg-zinc-950 border border-white/5 p-8">
-                      <h3 className="text-sm font-sans uppercase tracking-[0.2em] text-zinc-500 mb-8">Key Expertise</h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8">
+                    <div className="bg-foreground/[0.02] border border-foreground/5 p-10 md:p-12">
+                      <h3 className="text-[10px] font-sans uppercase tracking-[0.3em] text-foreground/30 mb-10 font-bold">KEY EXPERTISE</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12">
                         {member.expertise.map((item, i) => (
-                          <div key={i} className="flex items-start text-zinc-300 font-sans">
-                            <span className="text-primary mr-3 text-xs mt-1.5">◆</span>
-                            <span className="text-base">{item}</span>
+                          <div key={i} className="flex items-start text-foreground/70 font-sans group/item">
+                            <span className="text-primary mr-4 text-[8px] mt-2 opacity-40 group-hover/item:opacity-100 transition-opacity">◆</span>
+                            <span className="text-lg font-serif">{item}</span>
                           </div>
                         ))}
                       </div>

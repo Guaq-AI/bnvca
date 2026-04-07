@@ -32,14 +32,14 @@ export const Navigation = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-white/5 py-4"
+          ? "bg-background/90 backdrop-blur-xl border-b border-foreground/5 py-4"
           : "bg-transparent border-transparent py-6"
       )}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 border border-primary/50 rounded-full flex items-center justify-center text-primary font-serif font-bold text-lg group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500">
+          <div className="w-10 h-10 border border-primary/50 flex items-center justify-center text-primary font-serif font-bold text-lg group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500">
             B
           </div>
           <div className="flex flex-col">
@@ -58,7 +58,7 @@ export const Navigation = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="text-xs uppercase tracking-widest font-medium text-muted-foreground hover:text-primary transition-colors relative group py-2"
+              className="text-[10px] uppercase tracking-[0.25em] font-medium text-foreground/60 hover:text-primary transition-colors relative group py-2"
             >
               {link.name}
               <span className="absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
@@ -69,8 +69,8 @@ export const Navigation = () => {
         {/* CTA Button */}
         <div className="hidden md:block">
           <Link href="/contact">
-            <Button variant="outline" className="rounded-full px-8 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500 font-sans tracking-wide">
-              Consult With Us
+            <Button variant="outline" className="rounded-none px-8 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500 font-sans tracking-widest text-[10px] uppercase font-bold">
+              Consultation
             </Button>
           </Link>
         </div>
@@ -93,7 +93,7 @@ export const Navigation = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-2xl border-b border-white/5 shadow-2xl md:hidden"
+            className="absolute top-full left-0 right-0 bg-background/98 backdrop-blur-2xl border-b border-foreground/5 shadow-2xl md:hidden"
           >
             <div className="container mx-auto px-6 py-8 flex flex-col gap-6">
               {navLinks.map((link, i) => (
@@ -106,7 +106,7 @@ export const Navigation = () => {
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-2xl font-serif tracking-wide flex items-center justify-between border-b border-white/5 pb-4 group"
+                    className="text-2xl font-serif tracking-wide flex items-center justify-between border-b border-foreground/5 pb-4 group"
                   >
                     <span className="group-hover:text-primary transition-colors">{link.name}</span>
                     <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
@@ -120,7 +120,7 @@ export const Navigation = () => {
                 className="pt-4"
               >
                 <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  <Button className="w-full justify-center py-6 text-sm uppercase tracking-widest rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
+                  <Button className="w-full justify-center py-6 text-xs uppercase tracking-[0.2em] rounded-none bg-primary text-primary-foreground hover:bg-primary/90">
                     Schedule Consultation
                   </Button>
                 </Link>

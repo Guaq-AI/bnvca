@@ -1,0 +1,158 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "B BNVCA Chartered Accountants" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: B
+        - generic [ref=e6]:
+          - generic [ref=e7]: BNVCA
+          - generic [ref=e8]: Chartered Accountants
+      - generic [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "About" [ref=e11] [cursor=pointer]:
+          - /url: /about
+          - text: About
+        - link "Services" [ref=e12] [cursor=pointer]:
+          - /url: /services
+          - text: Services
+        - link "Team" [ref=e13] [cursor=pointer]:
+          - /url: /team
+          - text: Team
+        - link "Contact" [ref=e14] [cursor=pointer]:
+          - /url: /contact
+          - text: Contact
+      - link "Consult With Us" [ref=e16] [cursor=pointer]:
+        - /url: /contact
+        - button "Consult With Us" [ref=e17]
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e22]:
+        - generic [ref=e25]: Connect
+        - heading "Let's Talk." [level=1] [ref=e26]
+        - paragraph [ref=e27]: Have questions or need expert financial advice? We're here to help. Reach out to us to schedule a consultation.
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - heading "Mumbai Headquarters" [level=3] [ref=e33]
+            - generic [ref=e34]:
+              - img [ref=e35]
+              - paragraph [ref=e38]:
+                - text: Ground Floor, Vaidya Bhavan
+                - text: 92 Atmaram Merchant Road
+                - text: 2 Anantwadi, Opp Hotel Adarsh Baug
+                - text: Mumbai - 400 002
+          - generic [ref=e39]:
+            - heading "Direct Lines" [level=3] [ref=e40]
+            - generic [ref=e41]:
+              - generic [ref=e42]:
+                - img [ref=e43]
+                - paragraph [ref=e45]: 022 2208 7849
+              - generic [ref=e46]:
+                - img [ref=e47]
+                - generic [ref=e50]:
+                  - paragraph [ref=e51]: bnvcaoffice@gmail.com
+                  - paragraph [ref=e52]: office@bnvca.co.in
+          - generic [ref=e53]:
+            - heading "Business Hours" [level=3] [ref=e54]
+            - generic [ref=e55]:
+              - img [ref=e56]
+              - generic [ref=e59]:
+                - paragraph [ref=e60]: "Monday - Friday: 10:00 AM - 6:00 PM"
+                - paragraph [ref=e61]: "Saturday: By Appointment"
+        - generic [ref=e63]:
+          - heading "Send a Message" [level=2] [ref=e64]
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - generic [ref=e67]:
+                - generic [ref=e68]: Full Name
+                - textbox "Full Name" [ref=e69]:
+                  - /placeholder: John Doe
+              - generic [ref=e70]:
+                - generic [ref=e71]: Email Address
+                - textbox "Email Address" [ref=e72]:
+                  - /placeholder: john@example.com
+            - generic [ref=e73]:
+              - generic [ref=e74]:
+                - generic [ref=e75]: Phone Number
+                - textbox "Phone Number" [ref=e76]:
+                  - /placeholder: +91 98765 43210
+              - generic [ref=e77]:
+                - generic [ref=e78]: Practice Area
+                - combobox "Practice Area" [ref=e79]:
+                  - option "Select an area" [selected]
+                  - option "Direct Taxes and GST"
+                  - option "Audit & Assurance"
+                  - option "Regulatory Services"
+                  - option "Other Advisory"
+            - generic [ref=e80]:
+              - generic [ref=e81]: Inquiry Details
+              - textbox "Inquiry Details" [ref=e82]:
+                - /placeholder: How can we assist you?
+            - button "Submit Inquiry" [ref=e83]
+      - iframe [ref=e85]:
+        - link "Open in Maps (opens in new tab)" [ref=f1e6] [cursor=pointer]:
+          - /url: undefined
+          - text: Open in Maps
+          - img [ref=f1e8]
+  - contentinfo [ref=e86]:
+    - generic: B
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - link "B BNVCA Est. 1987" [ref=e90] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e91]: B
+            - generic [ref=e92]:
+              - generic [ref=e93]: BNVCA
+              - generic [ref=e94]: Est. 1987
+          - paragraph [ref=e95]: We provide unmatched excellence in Direct Tax, GST, Audit, and Regulatory Services. Navigating financial complexity with precision and integrity.
+        - generic [ref=e96]:
+          - heading "Navigation" [level=3] [ref=e97]
+          - list [ref=e98]:
+            - listitem [ref=e99]:
+              - link "Home" [ref=e100] [cursor=pointer]:
+                - /url: /
+                - img [ref=e101]
+                - text: Home
+            - listitem [ref=e103]:
+              - link "About" [ref=e104] [cursor=pointer]:
+                - /url: /about
+                - img [ref=e105]
+                - text: About
+            - listitem [ref=e107]:
+              - link "Services" [ref=e108] [cursor=pointer]:
+                - /url: /services
+                - img [ref=e109]
+                - text: Services
+            - listitem [ref=e111]:
+              - link "Team" [ref=e112] [cursor=pointer]:
+                - /url: /team
+                - img [ref=e113]
+                - text: Team
+            - listitem [ref=e115]:
+              - link "Contact" [ref=e116] [cursor=pointer]:
+                - /url: /contact
+                - img [ref=e117]
+                - text: Contact
+        - generic [ref=e119]:
+          - heading "Mumbai Office" [level=3] [ref=e120]
+          - list [ref=e121]:
+            - listitem [ref=e122]:
+              - text: Vaidya Bhavan, 92 Atmaram Merchant Road,
+              - text: Mumbai, Maharashtra 400002, India
+            - listitem [ref=e123]:
+              - link "+91 22 2208 7849" [ref=e124] [cursor=pointer]:
+                - /url: tel:+912222087849
+            - listitem [ref=e125]:
+              - link "office@bnvca.co.in" [ref=e126] [cursor=pointer]:
+                - /url: mailto:office@bnvca.co.in
+      - generic [ref=e127]:
+        - paragraph [ref=e128]: © 2026 BNVCA. All rights reserved.
+        - generic [ref=e129]:
+          - link "Privacy" [ref=e130] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms" [ref=e131] [cursor=pointer]:
+            - /url: /terms
+  - alert [ref=e132]
