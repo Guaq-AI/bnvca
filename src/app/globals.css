@@ -78,36 +78,33 @@
 }
 
 @utility btn-bezeled {
-  @apply relative px-10 py-4 rounded-full border-2 border-primary/20 bg-background text-primary font-bold uppercase tracking-[0.2em] text-[10px] transition-all duration-500 shadow-[4px_4px_0px_0px_rgba(var(--primary-rgb),0.1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] hover:bg-primary hover:text-primary-foreground hover:border-primary;
+  @apply relative inline-flex items-center justify-center px-10 py-4 rounded-full border-2 border-primary/20 bg-background text-primary font-bold uppercase tracking-[0.2em] text-[10px] transition-all duration-500 shadow-[4px_4px_0px_0px_rgba(28,54,48,0.1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] hover:bg-primary hover:text-primary-foreground hover:border-primary;
 }
 
 @layer base {
   :root {
-    --background: 40 20% 96%; /* Bone Beige */
-    --foreground: 160 20% 10%; /* Deep Forest Charcoal */
-    --card: 0 0% 98%;
-    --card-foreground: 160 20% 10%;
-    --popover: 0 0% 98%;
-    --popover-foreground: 160 20% 10%;
+    --background: #f5f4f0; /* Warm Bone Paper */
+    --foreground: #1a1a1a;
+    --card: #ffffff;
+    --card-foreground: #1a1a1a;
+    --popover: #ffffff;
+    --popover-foreground: #1a1a1a;
     
-    /* Primary: Deep Emerald Accent */
-    --primary: 165 30% 25%; 
-    --primary-rgb: 44, 64, 60;
-    --primary-foreground: 40 20% 98%;
+    --primary: #1c3630; /* Regal Deep Emerald */
+    --primary-foreground: #f5f4f0;
     
-    /* Secondary: Classic Bronze */
-    --secondary: 35 40% 30%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: #2a2a2a;
+    --secondary-foreground: #f5f4f0;
     
-    --muted: 40 10% 90%;
-    --muted-foreground: 165 10% 40%;
-    --accent: 35 40% 45%; /* Bronze-Gold */
-    --accent-foreground: 40 20% 98%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 160 10% 85%;
-    --input: 160 10% 85%;
-    --ring: 165 30% 25%;
+    --muted: #e5e4e0;
+    --muted-foreground: #666666;
+    --accent: #8a6d3b; /* Antique Bronze */
+    --accent-foreground: #f5f4f0;
+    --destructive: #cc0000;
+    --destructive-foreground: #f5f4f0;
+    --border: #d1d0cc;
+    --input: #d1d0cc;
+    --ring: #1c3630;
     --radius: 0rem;
   }
 }

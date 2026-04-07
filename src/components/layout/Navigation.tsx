@@ -21,18 +21,20 @@ export const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      // Instant translucency on any scroll
+      setScrolled(window.scrollY > 0);
     };
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial position
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-background/90 backdrop-blur-xl border-b border-foreground/5 py-4"
+          ? "bg-background/95 backdrop-blur-md border-b border-foreground/5 py-4 shadow-sm"
           : "bg-transparent border-transparent py-6"
       )}
     >
@@ -46,7 +48,7 @@ export const Navigation = () => {
             <span className="font-serif font-bold text-xl leading-none text-foreground tracking-wide uppercase">
               BNVCA
             </span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mt-1">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mt-1 font-bold">
               Chartered Accountants
             </span>
           </div>
@@ -58,7 +60,7 @@ export const Navigation = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="text-[10px] uppercase tracking-[0.25em] font-medium text-foreground/60 hover:text-primary transition-colors relative group py-2"
+              className="text-[10px] uppercase tracking-[0.25em] font-bold text-foreground/60 hover:text-primary transition-colors relative group py-2"
             >
               {link.name}
               <span className="absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
