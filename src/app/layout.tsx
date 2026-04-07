@@ -18,24 +18,80 @@ const outfit = Outfit({
   display: "swap",
 });
 
+const SITE_URL = "https://bnvca.co.in"; // Or the vercel URL if production domain isn't ready
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "B.N. Vaidya & Associates | Chartered Accountants in Mumbai",
+    default: "B.N. Vaidya & Associates | Chartered Accountants in Mumbai | Direct Tax & GST Experts",
     template: "%s | B.N. Vaidya & Associates",
   },
-  description: "B.N. Vaidya & Associates is a multidisciplinary Chartered Accountancy firm in Mumbai with over 35 years of expertise in Direct Tax, GST, Audit, and Regulatory Services.",
-  keywords: ["Chartered Accountants Mumbai", "B.N. Vaidya & Associates", "Income Tax Consultant Mumbai", "GST Advisory Mumbai", "Statutory Audit Mumbai", "Bullion Sector Consultancy"],
+  description: "B.N. Vaidya & Associates: Premier Chartered Accountancy firm in Mumbai. 35+ years expertise in Direct Tax, GST, Statutory Audit, and Bullion Sector Advisory. Trusted financial excellence for ambitious enterprises.",
+  keywords: [
+    "Chartered Accountants Mumbai", 
+    "B.N. Vaidya & Associates", 
+    "Income Tax Consultant Mumbai", 
+    "GST Advisory Mumbai", 
+    "Statutory Audit Mumbai", 
+    "Bullion Sector Consultancy", 
+    "Top CA firm South Mumbai",
+    "International Taxation India",
+    "FEMA Compliance Services",
+    "Digital Gold Advisory India"
+  ],
+  authors: [{ name: "B.N. Vaidya & Associates" }],
+  creator: "B.N. Vaidya & Associates",
+  publisher: "B.N. Vaidya & Associates",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     title: "B.N. Vaidya & Associates | Chartered Accountants in Mumbai",
-    description: "Multidisciplinary Chartered Accountancy firm providing expert tax, audit, and regulatory services since 1987.",
-    url: "https://bnvca.co.in",
+    description: "35+ years of uncompromising precision in Direct Tax, GST, Audit, and Bullion Advisory. Mumbai's premier multidisciplinary CA firm.",
+    url: SITE_URL,
     siteName: "B.N. Vaidya & Associates",
+    images: [
+      {
+        url: "/home1.png", // Using an existing high-quality image as social preview
+        width: 1200,
+        height: 630,
+        alt: "B.N. Vaidya & Associates | Luxury Boutique Chartered Accountants",
+      },
+    ],
     locale: "en_IN",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "B.N. Vaidya & Associates | Chartered Accountants in Mumbai",
+    description: "Expert Direct Tax, GST, and Audit services with a legacy of 35+ years. Mumbai's trusted financial partners.",
+    images: ["/home1.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png" },
+    ],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: SITE_URL,
   },
 };
 

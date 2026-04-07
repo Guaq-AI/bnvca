@@ -16,8 +16,31 @@ export default function ServiceDetailPage() {
     notFound();
   }
 
+  // Schema for AI/Google ingestion
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.title,
+    "description": service.fullDescription,
+    "provider": {
+      "@type": "AccountingService",
+      "name": "B.N. Vaidya & Associates",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Vaidya Bhavan, 92 Atmaram Merchant Road",
+        "addressLocality": "Mumbai",
+        "postalCode": "400002",
+        "addressCountry": "IN"
+      }
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       
       {/* Editorial Header */}
       <section className="relative pt-40 pb-20 border-b border-foreground/5 overflow-hidden">
@@ -125,13 +148,13 @@ export default function ServiceDetailPage() {
       {/* CTA Section - Fixed Centering */}
       <section className="py-32 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="container mx-auto px-6 md:px-12 text-center relative z-10">
-          <h2 className="text-5xl md:text-7xl font-serif mb-16 tracking-tight italic">
+          <h2 className="text-5xl md:text-7xl font-serif mb-16 tracking-tight italic text-white">
             Ready to solve your <br className="hidden md:block" /> financial complexity?
           </h2>
           <div className="flex justify-center">
             <Link href="/contact" className="btn-bezeled !bg-white !text-primary !border-white group">
               <span className="flex items-center gap-3">
-                Consultation
+                Schedule Consultation
                 <ArrowUpRight className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </span>
             </Link>
