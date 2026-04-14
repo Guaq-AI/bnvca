@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Team", href: "/team" },
   { name: "Contact", href: "/contact" },
@@ -41,12 +40,9 @@ export const Navigation = () => {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 border border-primary/50 flex items-center justify-center text-primary font-serif font-bold text-lg group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500">
-            B
-          </div>
           <div className="flex flex-col">
-            <span className="font-serif font-bold text-xl leading-none text-foreground tracking-wide uppercase">
-              BNVCA
+            <span className="font-serif font-bold text-lg leading-none text-foreground tracking-wide uppercase">
+              B. N. Vaidya & Associates
             </span>
             <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mt-1 font-bold">
               Chartered Accountants

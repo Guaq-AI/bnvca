@@ -48,7 +48,7 @@ export default function ContactPage() {
               className="lg:col-span-5 space-y-24"
             >
               <div>
-                <h3 className="text-[10px] font-sans uppercase tracking-[0.3em] text-primary mb-10 font-bold">HEADQUARTERS</h3>
+                <h3 className="text-[10px] font-sans uppercase tracking-[0.3em] text-primary mb-10 font-bold">OFFICE</h3>
                 <div className="flex items-start text-foreground/70 font-sans text-xl leading-relaxed group">
                   <MapPin className="h-6 w-6 text-primary mr-8 mt-1 opacity-40 group-hover:opacity-100 transition-opacity" />
                   <p className="font-light">
@@ -83,8 +83,7 @@ export default function ContactPage() {
                 <div className="flex items-start text-foreground/70 font-sans text-xl group">
                   <Clock className="h-6 w-6 text-primary mr-8 mt-1 opacity-40 group-hover:opacity-100 transition-opacity" />
                   <div className="font-light">
-                    <p className="mb-4">Monday - Friday: 10:00 AM - 6:00 PM</p>
-                    <div className="inline-block px-4 py-1 border border-primary/20 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold text-primary">Saturday: By Appointment</div>
+                    <p>Monday - Saturday: 10:00 AM - 6:00 PM</p>
                   </div>
                 </div>
               </div>

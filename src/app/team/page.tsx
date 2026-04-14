@@ -9,7 +9,7 @@ export default function TeamPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       
-      {/* Editorial Hero - Typographic Focus */}
+      {/* Basic Hero - Professional Focus */}
       <section className="relative pt-40 pb-24 border-b border-foreground/5">
         <div className="container mx-auto px-6 md:px-12 relative z-20">
           <motion.div
@@ -20,14 +20,14 @@ export default function TeamPage() {
             <div className="flex items-center gap-4 mb-8">
               <div className="h-px w-12 bg-primary" />
               <span className="text-[10px] font-sans tracking-[0.4em] text-primary uppercase font-bold">
-                THE PARTNERS
+                OUR PROFESSIONALS
               </span>
             </div>
-            <h1 className="text-7xl md:text-9xl lg:text-[10rem] font-serif leading-[0.85] tracking-tighter text-foreground mb-12">
-              Leadership & <span className="text-foreground/20 italic font-light">Vision.</span>
+            <h1 className="text-6xl md:text-8xl font-serif leading-[1.1] tracking-tighter text-foreground mb-12">
+              Deep-seated <span className="text-primary italic">Expertise.</span>
             </h1>
             <p className="text-xl md:text-2xl text-foreground/70 font-sans max-w-3xl leading-relaxed font-light">
-              Meet the experts behind B.N. Vaidya & Associates. A team dedicated to precision, integrity, and your financial success since 1987.
+              Meet the dedicated professionals at B.N. Vaidya & Associates. Built on a foundation of integrity and precision for nearly four decades.
             </p>
           </motion.div>
         </div>
@@ -86,18 +86,14 @@ export default function TeamPage() {
                         {member.name}
                       </h2>
                       <div className="flex items-center gap-6">
-                        <p className="text-[10px] font-sans uppercase tracking-[0.3em] text-primary font-bold">
-                          {member.role}
-                        </p>
-                        <span className="w-1 h-1 bg-foreground/20 rounded-full" />
                         <p className="text-[10px] font-sans uppercase tracking-[0.3em] text-foreground/40 font-bold">
                           {member.experience} EXP.
                         </p>
                       </div>
                     </div>
 
-                    <p className="text-3xl md:text-4xl font-serif text-foreground/40 italic leading-snug mb-16 tracking-tight">
-                      "{member.bio}"
+                    <p className="text-2xl md:text-3xl font-serif text-foreground/60 leading-relaxed mb-16">
+                      {member.bio}
                     </p>
 
                     <div className="bg-foreground/[0.02] border border-foreground/5 p-10 md:p-12">

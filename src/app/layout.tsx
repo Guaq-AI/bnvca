@@ -26,18 +26,16 @@ export const metadata: Metadata = {
     default: "B.N. Vaidya & Associates | Chartered Accountants in Mumbai | Direct Tax & GST Experts",
     template: "%s | B.N. Vaidya & Associates",
   },
-  description: "B.N. Vaidya & Associates: Premier Chartered Accountancy firm in Mumbai. 35+ years expertise in Direct Tax, GST, Statutory Audit, and Bullion Sector Advisory. Trusted financial excellence for ambitious enterprises.",
+  description: "B.N. Vaidya & Associates: Premier Chartered Accountancy firm in Mumbai. Since 1987, providing expertise in Direct Tax, GST, Statutory Audit, and Regulatory Advisory. Trusted financial excellence for businesses and individuals.",
   keywords: [
     "Chartered Accountants Mumbai", 
     "B.N. Vaidya & Associates", 
     "Income Tax Consultant Mumbai", 
     "GST Advisory Mumbai", 
     "Statutory Audit Mumbai", 
-    "Bullion Sector Consultancy", 
     "Top CA firm South Mumbai",
     "International Taxation India",
-    "FEMA Compliance Services",
-    "Digital Gold Advisory India"
+    "FEMA Compliance Services"
   ],
   authors: [{ name: "B.N. Vaidya & Associates" }],
   creator: "B.N. Vaidya & Associates",
@@ -49,7 +47,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "B.N. Vaidya & Associates | Chartered Accountants in Mumbai",
-    description: "35+ years of uncompromising precision in Direct Tax, GST, Audit, and Bullion Advisory. Mumbai's premier multidisciplinary CA firm.",
+    description: "Nearly four decades of uncompromising precision in Direct Tax, GST, Audit, and Regulatory Advisory. Mumbai's premier multidisciplinary CA firm.",
     url: SITE_URL,
     siteName: "B.N. Vaidya & Associates",
     images: [
@@ -57,7 +55,7 @@ export const metadata: Metadata = {
         url: "/home1.png", // Using an existing high-quality image as social preview
         width: 1200,
         height: 630,
-        alt: "B.N. Vaidya & Associates | Luxury Boutique Chartered Accountants",
+        alt: "B.N. Vaidya & Associates | Chartered Accountants",
       },
     ],
     locale: "en_IN",

@@ -4,20 +4,13 @@ export interface ServiceDetail {
   shortDescription: string;
   fullDescription: string;
   offerings: string[];
-  caseStudy?: {
-    title: string;
-    context: string;
-    challenge: string;
-    solution: string;
-    outcome: string;
-  };
 }
 
 export const companyInfo = {
   name: "B.N. Vaidya & Associates",
   tagline: "Legacy of Trust. Excellence in Practice.",
   foundedYear: 1987,
-  description: "B.N. Vaidya & Associates is a multidisciplinary Chartered Accountancy firm built on a foundation of integrity, precision, and deep-seated expertise. For nearly four decades, we have served as trusted advisors to businesses and individuals, navigating the complexities of the financial landscape with a commitment to excellence.",
+  description: "Founded in 1987, B.N. Vaidya & Associates is a multidisciplinary Chartered Accountancy firm built on a foundation of integrity, precision, and deep-seated expertise. For nearly four decades, we have served as trusted advisors to businesses and individuals, navigating the complexities of the financial landscape with a commitment to excellence.",
   contact: {
     phone: "022 2208 7849",
     emails: ["bnvcaoffice@gmail.com", "office@bnvca.co.in"],
@@ -49,14 +42,7 @@ export const services: ServiceDetail[] = [
       "International taxation",
       "Transfer pricing",
       "Tailored solutions for estate/ succession planning"
-    ],
-    caseStudy: {
-      title: "Optimizing GST Structures for a Multi-State Retailer",
-      context: "A prominent retail chain with operations across five Indian states was struggling with inconsistent input tax credit (ITC) reconciliation and high compliance overhead.",
-      challenge: "The client faced potential tax leakages and significant penalties due to mismatched records across different regional jurisdictions.",
-      solution: "We implemented a centralized GST compliance framework, overhauled their internal accounting processes for real-time ITC tracking, and provided representation for pending regional tax assessments.",
-      outcome: "Reduced tax liability by 12% through identified leakages and achieved 100% compliance accuracy across all states within the first fiscal year."
-    }
+    ]
   },
   {
     id: "audit-assurance",
@@ -68,14 +54,7 @@ export const services: ServiceDetail[] = [
       "Tax audit",
       "Internal audit and risk advisory",
       "Management audits"
-    ],
-    caseStudy: {
-      title: "Statutory Audit for a Global Bullion Trading Entity",
-      context: "A large-scale bullion importer required a comprehensive statutory audit that adhered to both Indian GAAP and international transparency standards.",
-      challenge: "The high-volume, high-value nature of bullion transactions required extremely precise inventory valuation and verification of complex import-export documentation.",
-      solution: "Our team deployed specialized audit techniques for precious metals, utilizing a multi-layered verification process for physical inventory and cross-referencing global trade settlements.",
-      outcome: "Provided a clean, high-integrity audit report that satisfied international lenders and regulatory bodies, facilitating an expansion of the client's credit lines."
-    }
+    ]
   },
   {
     id: "regulatory-services",
@@ -89,44 +68,16 @@ export const services: ServiceDetail[] = [
       "PMLA related matters",
       "Arbitration and mediation services",
       "Advocacy related initiatives"
-    ],
-    caseStudy: {
-      title: "FEMA Compliance for Cross-Border Investment",
-      context: "An international investment platform sought to establish a significant presence in India through an Alternative Investment Fund (AIF).",
-      challenge: "The transaction involved complex inbound investment routes and required strict adherence to Foreign Exchange Management Act (FEMA) guidelines and SEBI registration norms.",
-      solution: "We provided end-to-end advisory on the structuring of the fund, prepared all necessary documentation for FEMA compliance, and navigated the regulatory approval process with the relevant authorities.",
-      outcome: "Successfully secured SEBI registration and ensured seamless cross-border capital flow, enabling the client to launch their first Indian fund on schedule."
-    }
-  },
-  {
-    id: "bullion-advisory",
-    title: "Bullion & Advisory",
-    shortDescription: "Specialized consultancy for the precious metals sector, from market entry to commodity exchange setup.",
-    fullDescription: "With over three decades of specific expertise in the bullion sector, we offer unmatched strategic advisory for precious metals markets. From helping banks set up bullion trading desks to advising on the reform process with RBI and SEBI, we provide the deep domain knowledge required to navigate this specialized industry.",
-    offerings: [
-      "Bullion trading and desk setup for banks",
-      "Consultancy for refineries and jewellery businesses",
-      "Advisory on Gold ETFs and Digital Gold products",
-      "Commodity exchange setup and regulatory navigation",
-      "Industry-specific tax structuring for precious metals"
-    ],
-    caseStudy: {
-      title: "Strategic Entry for a Digital Gold Platform",
-      context: "A fintech startup aimed to launch a regulated Digital Gold product in the Indian market.",
-      challenge: "The project required navigating complex storage regulations, ensuring physical gold backing transparency, and adhering to evolving SEBI guidelines.",
-      solution: "Leveraging our deep ties with the World Gold Council and regulatory bodies, we structured the legal framework for the product, established audit protocols for physical inventory, and guided the SEBI approval process.",
-      outcome: "The platform launched successfully as one of the first compliant Digital Gold providers in India, achieving over 1 million users within 18 months."
-    }
+    ]
   }
 ];
 
 export const team = [
   {
     name: "Bhargava Vaidya",
-    role: "Senior Partner",
     experience: "Around 40 years",
     specialization: "Gem & Jewellery Sector",
-    bio: "Bhargava Vaidya specializes in the Gem & Jewellery sector, providing consultancy and services to prominent players including diamond traders, bullion experts, refineries, and jewellery businesses. His affiliation with bullion started in 1992, and he has been a consistent participant in activities of prestigious entities such as the World Gold Council, ASSOCHAM, FICCI, and GJEPC.",
+    bio: "Bhargava Vaidya, with around four decades of experience, specializes in the Gem & Jewellery sector. He provides consultancy/services to prominent players in the industry, including diamond traders, bullion experts, refineries, and jewellery businesses. The firm also provides services to banks and NBFC’s (Non-Banking Financial companies), mainly to those active in the Gem & Jewellery sector.",
     expertise: [
       "Bullion trading and desk setup for banks",
       "Reform process in bullion (presentations to FMC, RBI, SEBI)",
@@ -137,10 +88,9 @@ export const team = [
   },
   {
     name: "Bhakti Vaidya",
-    role: "Partner",
     experience: "Over 10 years",
     specialization: "Direct Tax & Audit",
-    bio: "Bhakti is a Chartered Accountant with extensive experience in direct tax and audit, specifically in the financial services space. She specializes in setting up Alternative Investment Funds (AIFs) and investment platforms, including in GIFT City, with a strong focus on tax efficiency and regulatory compliance.",
+    bio: "Bhakti is a Chartered Accountant with over a decade of professional experience in the fields of direct tax and audit. She focuses on the financial services space, specifically in structuring and tax and regulatory aspects. She specialises in setting up of alternative investment funds (AIFs) and investment platforms, including in GIFT City, with a strong focus on tax efficiency and regulatory compliance.",
     expertise: [
       "AIFs and investment platform structuring",
       "Cross-border tax considerations",
@@ -151,10 +101,9 @@ export const team = [
   },
   {
     name: "Ashish Jain",
-    role: "Partner",
     experience: "Over 20 years",
     specialization: "Taxation, Audit & Advisory",
-    bio: "Ashish is a seasoned professional supporting the firm's specialized consultancy for the gem & jewellery, textile, and paper sectors. He provides essential support across a wide spectrum of financial and advisory matters with a focus on precision and regulatory excellence.",
+    bio: "Ashish is a seasoned professional with over 20 years of experience. He has been supporting the firm’s specialized consultancy for the gem & jewellery, textile and paper sectors for over 20 years. With a focus on precision and regulatory excellence, Ashish provides essential support across a wide spectrum of financial and advisory matters.",
     expertise: [
       "Taxation & GST compliance",
       "Accounting & Audit management",
@@ -162,21 +111,3 @@ export const team = [
     ]
   }
 ];
-
-export const firmHistory = {
-  founded: 1987,
-  milestones: [
-    {
-      year: 1987,
-      event: "Firm founded by B.N. Vaidya"
-    },
-    {
-      year: 1992,
-      event: "Expansion into Bullion sector consultancy"
-    },
-    {
-      year: "1993-1994",
-      event: "Member of FIEO Committee recommending liberalisation of bullion Import"
-    }
-  ]
-};
