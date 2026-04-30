@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, MapPin } from "lucide-react";
 import { companyInfo } from "@/data/content";
 
@@ -12,7 +13,15 @@ export const Footer = () => {
           
           {/* Brand Col */}
           <div className="md:col-span-4 space-y-8">
-            <Link href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-4">
+              <div className="relative w-12 h-12 overflow-hidden border border-foreground/5 bg-white p-1">
+                <Image
+                  src="/logo.jpeg"
+                  alt="B. N. Vaidya & Associates Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <div className="flex flex-col">
                 <span className="font-serif font-bold text-2xl leading-none text-foreground tracking-wide uppercase text-primary">
                   B. N. Vaidya & Associates

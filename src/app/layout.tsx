@@ -52,21 +52,21 @@ export const metadata: Metadata = {
     siteName: "B.N. Vaidya & Associates",
     images: [
       {
-        url: "/home1.png", // Using an existing high-quality image as social preview
+        url: "/logo.jpeg",
         width: 1200,
         height: 630,
-        alt: "B.N. Vaidya & Associates | Chartered Accountants",
+        alt: "B. N. Vaidya & Associates | Chartered Accountants",
       },
     ],
     locale: "en_IN",
     type: "website",
-  },
-  twitter: {
+    },
+    twitter: {
     card: "summary_large_image",
-    title: "B.N. Vaidya & Associates | Chartered Accountants in Mumbai",
-    description: "Expert Direct Tax, GST, and Audit services with a legacy of 35+ years. Mumbai's trusted financial partners.",
-    images: ["/home1.png"],
-  },
+    title: "B. N. Vaidya & Associates | Chartered Accountants in Mumbai",
+    description: "Expert Direct Tax, GST, and Audit services with a legacy of nearly four decades. Mumbai's trusted financial partners.",
+    images: ["/logo.jpeg"],
+    },
   icons: {
     icon: [
       { url: "/favicon.ico" },

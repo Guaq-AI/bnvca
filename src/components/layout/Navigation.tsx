@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -39,7 +40,15 @@ export const Navigation = () => {
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-4 group">
+          <div className="relative w-12 h-12 overflow-hidden border border-foreground/5 bg-white p-1">
+            <Image
+              src="/logo.jpeg"
+              alt="B. N. Vaidya & Associates Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
           <div className="flex flex-col">
             <span className="font-serif font-bold text-lg leading-none text-foreground tracking-wide uppercase">
               B. N. Vaidya & Associates
