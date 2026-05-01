@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { team } from "@/data/content";
-import { Briefcase } from "lucide-react";
+import { Briefcase, Check, Building2, Award } from "lucide-react";
 
 export default function TeamPage() {
   return (
@@ -36,7 +36,7 @@ export default function TeamPage() {
       {/* Team Members List */}
       <section className="py-32">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="space-y-56">
+          <div className="space-y-64">
             {team.map((member, index) => (
               <div key={member.name} className="relative">
                 <div className={`grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start`}>
@@ -79,33 +79,84 @@ export default function TeamPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className={`lg:col-span-6 ${index % 2 !== 0 ? 'lg:order-1' : 'lg:col-start-7'} pt-12`}
+                    className={`lg:col-span-7 ${index % 2 !== 0 ? 'lg:order-1' : 'lg:col-start-6'} pt-12`}
                   >
-                    <div className="mb-16">
+                    <div className="mb-12">
                       <h2 className="text-5xl md:text-6xl font-serif text-foreground mb-6 tracking-tight">
                         {member.name}
                       </h2>
                       <div className="flex items-center gap-6">
-                        <p className="text-[10px] font-sans uppercase tracking-[0.3em] text-foreground/40 font-bold">
+                        <p className="text-[10px] font-sans uppercase tracking-[0.3em] text-primary font-bold">
                           {member.experience} EXP.
                         </p>
                       </div>
                     </div>
 
-                    <p className="text-2xl md:text-3xl font-serif text-foreground/60 leading-relaxed mb-16">
-                      {member.bio}
-                    </p>
+                    <div className="prose prose-lg max-w-none mb-16">
+                      <p className="text-xl md:text-2xl text-foreground/70 font-sans leading-relaxed font-light">
+                        {member.bio}
+                      </p>
+                    </div>
 
-                    <div className="bg-foreground/[0.02] border border-foreground/5 p-10 md:p-12">
-                      <h3 className="text-[10px] font-sans uppercase tracking-[0.3em] text-foreground/30 mb-10 font-bold">KEY EXPERTISE</h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12">
-                        {member.expertise.map((item, i) => (
-                          <div key={i} className="flex items-start text-foreground/70 font-sans group/item">
-                            <span className="text-primary mr-4 text-[8px] mt-2 opacity-40 group-hover/item:opacity-100 transition-opacity">◆</span>
-                            <span className="text-lg font-serif">{item}</span>
+                    {/* Additional Details Grid */}
+                    <div className="grid grid-cols-1 gap-12">
+                      
+                      {/* Trade Bodies / Previous Experience Section */}
+                      {(member.tradeBodies || member.previousExperience) && (
+                        <motion.div 
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          className="bg-foreground/[0.02] border border-foreground/5 p-8 md:p-12"
+                        >
+                          <h3 className="text-[10px] font-sans uppercase tracking-[0.3em] text-primary mb-8 font-bold flex items-center gap-3">
+                            {member.tradeBodies ? <Building2 className="h-3 w-3" /> : <Briefcase className="h-3 w-3" />}
+                            {member.tradeBodies ? "ASSOCIATION WITH TRADE BODIES" : "PREVIOUS PROFESSIONAL EXPERIENCE"}
+                          </h3>
+                          <p className="text-lg text-foreground/60 font-sans leading-relaxed font-light">
+                            {member.tradeBodies || member.previousExperience}
+                          </p>
+                        </motion.div>
+                      )}
+
+                      {/* Subject Expertise / Milestones */}
+                      {member.subjectExpertise && (
+                        <motion.div 
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          className="space-y-10"
+                        >
+                          <div>
+                            <h3 className="text-[10px] font-sans uppercase tracking-[0.3em] text-primary mb-8 font-bold flex items-center gap-3">
+                              <Award className="h-3 w-3" /> SUBJECT MATTER EXPERTISE & CONTRIBUTIONS
+                            </h3>
+                            <p className="text-foreground/50 font-sans italic mb-8">{member.subjectExpertise.context}</p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                              {member.subjectExpertise.points.map((point, i) => (
+                                <div key={i} className="flex items-start gap-4 group/point">
+                                  <Check className="h-4 w-4 text-primary mt-1 flex-shrink-0 opacity-40 group-hover/point:opacity-100 transition-opacity" />
+                                  <span className="text-base text-foreground/70 font-sans leading-relaxed">{point}</span>
+                                </div>
+                              ))}
+                            </div>
                           </div>
-                        ))}
+                        </motion.div>
+                      )}
+
+                      {/* Key Expertise Block */}
+                      <div className="pt-8 border-t border-foreground/5">
+                        <h3 className="text-[10px] font-sans uppercase tracking-[0.3em] text-foreground/30 mb-8 font-bold">CORE FOCUS AREAS</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
+                          {member.expertise.map((item, i) => (
+                            <div key={i} className="flex items-center text-foreground/70 font-sans group/item">
+                              <div className="w-1.5 h-1.5 rounded-full bg-primary/30 mr-4 group-hover/item:bg-primary transition-colors" />
+                              <span className="text-lg font-serif">{item}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
+
                     </div>
 
                   </motion.div>

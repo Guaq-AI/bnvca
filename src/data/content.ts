@@ -72,7 +72,22 @@ export const services: ServiceDetail[] = [
   }
 ];
 
-export const team = [
+export interface TeamMember {
+  name: string;
+  experience: string;
+  specialization: string;
+  bio: string;
+  expertise: string[];
+  linkedin?: string;
+  tradeBodies?: string;
+  subjectExpertise?: {
+    context: string;
+    points: string[];
+  };
+  previousExperience?: string;
+}
+
+export const team: TeamMember[] = [
   {
     name: "Bhargava Vaidya",
     experience: "Around 40 years",
@@ -84,13 +99,28 @@ export const team = [
       "Gold ETFs and Digital Gold products",
       "Commodity exchange setup"
     ],
+    tradeBodies: "Bhargava has been a member of various committees set up by trade associations, trade bodies and regulators. He has been a consistent participant in the activities of prestigious entities such as the World Gold Council (WGC), Associated Chamber of Commerce & Industry (ASSOCHAM), Federation of Indian Chambers of Commerce & Industry (FICCI), Gem & Jewellery Export Promotion Council (GJEPC), London Bullion Market Association (LBMA), Dubai Multi Commodity Center (DMCC), India Bullion and Jewellers Association (IBJA), the All India Gem & Jewellery Trade Federation (GJF), and various commodity exchanges.",
+    subjectExpertise: {
+      context: "Bhargava’s affiliation with bullion started from 1992. Across the years, his contributions include:",
+      points: [
+        "1993-1994: Member of Federation of Indian Exports Organisation (FIEO) Committee which recommended liberalisation of bullion Import (SIL route).",
+        "Set up desk of bullion trading and assisted players in Jewellery Wholesale, Retail & Branded jewellery segment.",
+        "Assisted many banks in setting up bullion desk (advising including marketing and compliance procedures).",
+        "Been a part of reform process in bullion and made presentations to Forward Market Commission, Reserve Bank of India, SEBI etc.",
+        "Involved in the initial set up of commodity exchange in India.",
+        "Part of core team which visualized and launched Gold ETF’s.",
+        "Actively involved in development of Digital Gold products in India.",
+        "Product committee member of national commodity exchanges in India."
+      ]
+    },
     linkedin: "https://www.linkedin.com/in/bhargava-vaidya-519b3317"
   },
   {
     name: "Bhakti Vaidya",
     experience: "Over 10 years",
     specialization: "Direct Tax & Audit",
-    bio: "Bhakti is a Chartered Accountant with over a decade of professional experience in the fields of direct tax and audit. She focuses on the financial services space, specifically in structuring and tax and regulatory aspects. She specialises in setting up of alternative investment funds (AIFs) and investment platforms, including in GIFT City, with a strong focus on tax efficiency and regulatory compliance.",
+    bio: "Bhakti is a Chartered Accountant with over a decade of professional experience in the fields of direct tax and audit. She focuses on the financial services space, specifically in structuring and tax and regulatory aspects. She specialises in setting up of alternative investment funds (AIFs) and investment platforms, including in GIFT City, with a strong focus on tax efficiency and regulatory compliance. She also offers end-to-end transaction support, from due diligence and structuring to execution and ongoing compliance. In addition to the above, she also looks at income tax compliances and return filings and assists clients with tax disputes and litigation.",
+    previousExperience: "She has previously worked in Bansi S. Mehta & Co., specialising in direct taxes and also spent over seven years at Ernst & Young LLP, contributing to the Private Equity and Financial Services team, providing direct tax and regulatory services to financial services and private equity clients, including AIFs and offshore funds.",
     expertise: [
       "AIFs and investment platform structuring",
       "Cross-border tax considerations",
